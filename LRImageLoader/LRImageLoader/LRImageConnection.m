@@ -96,31 +96,27 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
     
     if (progressBlocks.count > 0) {
         UIImage *partialImage = [UIImage imageWithData:dataContainer];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            for (LRImageProgressBlock progressBlock in progressBlocks) {
-                progressBlock(progress, partialImage);
-            }
-        });
+        for (LRImageProgressBlock progressBlock in progressBlocks) {
+            progressBlock(progress, partialImage);
+        }
     }
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        if (error) {
-            [self callCompletionBlocksWithImage:nil errorString:error.localizedDescription];
+    if (error) {
+        [self callCompletionBlocksWithImage:nil errorString:error.localizedDescription];
+    } else {
+        UIImage *image = [UIImage imageWithData:dataContainer];
+        if (image && !CGSizeEqualToSize(image.size, CGSizeZero)) {
+            [self callCompletionBlocksWithImage:image errorString:nil];
         } else {
-            UIImage *image = [UIImage imageWithData:dataContainer];
-            if (image && !CGSizeEqualToSize(image.size, CGSizeZero)) {
-                [self callCompletionBlocksWithImage:image errorString:nil];
-            } else {
-                NSString *errorString = @"Image is nil";
-                [self callCompletionBlocksWithImage:nil errorString:errorString];
-            }
+            NSString *errorString = @"Image is nil";
+            [self callCompletionBlocksWithImage:nil errorString:errorString];
         }
-        progressBlocks = nil;
-        completionBlocks = nil;
-        [connectionCache removeObjectForKey:request.URL];
-    }];
+    }
+    progressBlocks = nil;
+    completionBlocks = nil;
+    [connectionCache removeObjectForKey:request.URL];
 }
 
 #pragma mark - Private Methods

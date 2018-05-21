@@ -13,6 +13,7 @@
 @interface LRImageStore ()
 {
     NSMutableDictionary *memoryCache;
+    NSMutableDictionary *requestMap;
 }
 @end
 
@@ -37,6 +38,7 @@
     self = [super init];
     if (self) {
         memoryCache = [NSMutableDictionary dictionary];
+        requestMap = [NSMutableDictionary dictionary];
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self
                    selector:@selector(clearMemoryCache)
@@ -53,11 +55,25 @@
 
 #pragma mark - Convenience Methods
 
-- (void)fetchImageForURL:(NSURL *)url progress:(LRImageProgressBlock)progress completion:(LRImageCompletionBlock)completion {
-    if (!url) {
-        completion ? completion(nil, @"URL is nil") : nil;
-        return;
+- (void)loadImage:(NSString *)url placeholder:(UIImage *)placeholder into:(UIImageView *)imageView {
+    NSNumber *hash = @(imageView.hash);
+    requestMap[hash] = url;
+    if (placeholder) {
+        imageView.image = placeholder;
     }
+    __weak UIImageView *weakView = imageView;   // avoid memory usage increasing
+    [self fetchImageForURL:url progress:nil completion:^(UIImage *image, NSString *error) {
+        if (requestMap[hash] != url) {
+            return;
+        }
+        if (weakView && !error) {
+            weakView.image = image;
+        }
+        [requestMap removeObjectForKey:hash];
+    }];
+}
+
+- (void)fetchImageForURL:(NSString *)url progress:(LRImageProgressBlock)progress completion:(LRImageCompletionBlock)completion {
     // check cache first
     NSString *key = [self keyForURL:url];
     UIImage *image = [self imageForKey:key];
@@ -68,17 +84,31 @@
         return;
     }
     // if not cached, then download
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     LRImageConnection *connection = [LRImageConnection connectionWithRequest:request];
     [connection startWithProgress:progress completion:^(UIImage *image, NSString *error) {
         if (!error) {
             [self setImage:image forKey:key];
         }
-        completion ? completion(image, error) : nil;
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            completion ? completion(image, error) : nil;
+        }];
     }];
 }
 
 #pragma mark - Image Cache Methods
+
+- (NSString *)keyForURL:(NSString *)urlString {
+    const char *str = [urlString UTF8String];
+    if (str == NULL) {
+        str = "";
+    }
+    unsigned char r[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(str, (CC_LONG)strlen(str), r);
+    NSString *key = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+                     r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10], r[11], r[12], r[13], r[14], r[15]];
+    return key;
+}
 
 - (void)setImage:(UIImage *)image forKey:(NSString *)key {
     [memoryCache setObject:image forKey:key];
@@ -112,19 +142,6 @@
     return path;
 }
 
-- (NSString *)keyForURL:(NSURL *)url {
-    NSString *urlString = [url absoluteString];
-    const char *str = [urlString UTF8String];
-    if (str == NULL) {
-        str = "";
-    }
-    unsigned char r[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(str, (CC_LONG)strlen(str), r);
-    NSString *key = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
-                     r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10], r[11], r[12], r[13], r[14], r[15]];
-    return key;
-}
-
 #pragma mark - Directory Related Methods
 
 - (NSString *)imageDirectory {
@@ -144,7 +161,7 @@
     }
 }
 
-#pragma mark - Clear Related Methods
+#pragma mark - Cache Clear Methods
 
 - (void)clearMemoryCache {
     NSLog(@"flushing %d images out of the cache", (int)memoryCache.count);
