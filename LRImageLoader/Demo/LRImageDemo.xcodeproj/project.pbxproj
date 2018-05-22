@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D701EE8B20B3B51B00A7DCE2 /* LRPhotoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */; };
+		D701EE8E20B3C3C100A7DCE2 /* LRPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */; };
+		D701EE9120B3C6C200A7DCE2 /* LRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */; };
+		D701EE9520B3C8DC00A7DCE2 /* LRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */; };
+		D701EE9620B3C8DC00A7DCE2 /* LRPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */; };
+		D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */; };
+		D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */; };
+		D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */; };
+		D701EEB720B3EE4300A7DCE2 /* LRImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */; };
+		D701EEB820B3EE4300A7DCE2 /* LRImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D71E899820B2CEA600E1CC76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E899720B2CEA600E1CC76 /* AppDelegate.m */; };
+		D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71E899F20B2CEA600E1CC76 /* Assets.xcassets */; };
+		D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71E89A120B2CEA600E1CC76 /* LaunchScreen.storyboard */; };
+		D71E89A620B2CEA600E1CC76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E89A520B2CEA600E1CC76 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D701EEB520B3EDA800A7DCE2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D701EEB820B3EE4300A7DCE2 /* LRImageLoader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D701EE8920B3B51B00A7DCE2 /* LRPhotoStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotoStore.h; sourceTree = "<group>"; };
+		D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotoStore.m; sourceTree = "<group>"; };
+		D701EE8C20B3C3C100A7DCE2 /* LRPhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotosViewController.h; sourceTree = "<group>"; };
+		D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotosViewController.m; sourceTree = "<group>"; };
+		D701EE8F20B3C6C200A7DCE2 /* LRPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhoto.h; sourceTree = "<group>"; };
+		D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhoto.m; sourceTree = "<group>"; };
+		D701EE9220B3C8DC00A7DCE2 /* LRPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotoCell.h; sourceTree = "<group>"; };
+		D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotoCell.m; sourceTree = "<group>"; };
+		D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRPhotoCell.xib; sourceTree = "<group>"; };
+		D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRImageLoader.framework; sourceTree = "<group>"; };
+		D71E899320B2CEA600E1CC76 /* LRImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71E899620B2CEA600E1CC76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D71E899720B2CEA600E1CC76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D71E899F20B2CEA600E1CC76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D71E89A220B2CEA600E1CC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D71E89A420B2CEA600E1CC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D71E89A520B2CEA600E1CC76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D71E899020B2CEA600E1CC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D701EEB720B3EE4300A7DCE2 /* LRImageLoader.framework in Frameworks */,
+				D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */,
+				D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */,
+				D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D701EE8520B3B29D00A7DCE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D701EE8F20B3C6C200A7DCE2 /* LRPhoto.h */,
+				D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D701EE8620B3B2D700A7DCE2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D701EE8920B3B51B00A7DCE2 /* LRPhotoStore.h */,
+				D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D701EE8720B3B2EC00A7DCE2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D701EE8C20B3C3C100A7DCE2 /* LRPhotosViewController.h */,
+				D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D701EE8820B3B2F400A7DCE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D701EE9220B3C8DC00A7DCE2 /* LRPhotoCell.h */,
+				D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */,
+				D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D71E898A20B2CEA600E1CC76 = {
+			isa = PBXGroup;
+			children = (
+				D71E899520B2CEA600E1CC76 /* LRImageDemo */,
+				D71E89AE20B2D0BE00E1CC76 /* Frameworks */,
+				D71E899420B2CEA600E1CC76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D71E899420B2CEA600E1CC76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D71E899320B2CEA600E1CC76 /* LRImageDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D71E899520B2CEA600E1CC76 /* LRImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D701EE8720B3B2EC00A7DCE2 /* ViewControllers */,
+				D701EE8820B3B2F400A7DCE2 /* Views */,
+				D701EE8520B3B29D00A7DCE2 /* Models */,
+				D701EE8620B3B2D700A7DCE2 /* Repositories */,
+				D71E899620B2CEA600E1CC76 /* AppDelegate.h */,
+				D71E899720B2CEA600E1CC76 /* AppDelegate.m */,
+				D71E89AC20B2D02600E1CC76 /* Supporting Files */,
+			);
+			path = LRImageDemo;
+			sourceTree = "<group>";
+		};
+		D71E89AC20B2D02600E1CC76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D71E899F20B2CEA600E1CC76 /* Assets.xcassets */,
+				D71E89A420B2CEA600E1CC76 /* Info.plist */,
+				D71E89A520B2CEA600E1CC76 /* main.m */,
+				D71E89A120B2CEA600E1CC76 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D71E89AE20B2D0BE00E1CC76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */,
+				D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */,
+				D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */,
+				D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D71E899220B2CEA600E1CC76 /* LRImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageDemo" */;
+			buildPhases = (
+				D71E898F20B2CEA600E1CC76 /* Sources */,
+				D71E899020B2CEA600E1CC76 /* Frameworks */,
+				D71E899120B2CEA600E1CC76 /* Resources */,
+				D701EEB520B3EDA800A7DCE2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRImageDemo;
+			productName = LRImageDemo;
+			productReference = D71E899320B2CEA600E1CC76 /* LRImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D71E898B20B2CEA600E1CC76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = tomrlq;
+				TargetAttributes = {
+					D71E899220B2CEA600E1CC76 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D71E898A20B2CEA600E1CC76;
+			productRefGroup = D71E899420B2CEA600E1CC76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D71E899220B2CEA600E1CC76 /* LRImageDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D71E899120B2CEA600E1CC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D701EE9620B3C8DC00A7DCE2 /* LRPhotoCell.xib in Resources */,
+				D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */,
+				D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D71E898F20B2CEA600E1CC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D701EE9520B3C8DC00A7DCE2 /* LRPhotoCell.m in Sources */,
+				D71E89A620B2CEA600E1CC76 /* main.m in Sources */,
+				D701EE8E20B3C3C100A7DCE2 /* LRPhotosViewController.m in Sources */,
+				D701EE8B20B3B51B00A7DCE2 /* LRPhotoStore.m in Sources */,
+				D71E899820B2CEA600E1CC76 /* AppDelegate.m in Sources */,
+				D701EE9120B3C6C200A7DCE2 /* LRPhoto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D71E89A120B2CEA600E1CC76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D71E89A220B2CEA600E1CC76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D71E89A720B2CEA600E1CC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D71E89A820B2CEA600E1CC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D71E89AA20B2CEA600E1CC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FVVDGE72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LRImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D71E89AB20B2CEA600E1CC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FVVDGE72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LRImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D71E89A720B2CEA600E1CC76 /* Debug */,
+				D71E89A820B2CEA600E1CC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D71E89AA20B2CEA600E1CC76 /* Debug */,
+				D71E89AB20B2CEA600E1CC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D71E898B20B2CEA600E1CC76 /* Project object */;
+}

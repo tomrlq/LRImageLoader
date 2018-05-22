@@ -11,7 +11,7 @@
 		D7703C9620AEC3C500945FC8 /* LRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D7703C9220AEC3C500945FC8 /* LRImageStore.m */; };
 		D7703C9720AEC3C500945FC8 /* LRImageConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D7703C9320AEC3C500945FC8 /* LRImageConnection.h */; };
 		D7703C9820AEC3C500945FC8 /* LRImageConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D7703C9420AEC3C500945FC8 /* LRImageConnection.m */; };
-		D7703C9920AEC3C500945FC8 /* LRImageStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D7703C9520AEC3C500945FC8 /* LRImageStore.h */; };
+		D7703C9920AEC3C500945FC8 /* LRImageStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D7703C9520AEC3C500945FC8 /* LRImageStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,8 +80,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7703C8B20AEC25300945FC8 /* LRImageLoader.h in Headers */,
-				D7703C9720AEC3C500945FC8 /* LRImageConnection.h in Headers */,
 				D7703C9920AEC3C500945FC8 /* LRImageStore.h in Headers */,
+				D7703C9720AEC3C500945FC8 /* LRImageConnection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

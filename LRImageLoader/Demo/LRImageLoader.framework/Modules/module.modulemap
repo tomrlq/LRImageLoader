@@ -1,0 +1,6 @@
+framework module LRImageLoader {
+  umbrella header "LRImageLoader.h"
+
+  export *
+  module * { export * }
+}
