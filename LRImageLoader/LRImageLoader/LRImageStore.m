@@ -56,11 +56,16 @@
 #pragma mark - Convenience Methods
 
 - (void)loadImage:(NSString *)url placeholder:(UIImage *)placeholder into:(UIImageView *)imageView {
-    NSNumber *hash = @(imageView.hash);
-    requestMap[hash] = url;
     if (placeholder) {
         imageView.image = placeholder;
+    } else {
+        imageView.image = nil;
     }
+    if (!url || !imageView) {
+        return;
+    }
+    NSNumber *hash = @(imageView.hash);
+    requestMap[hash] = url;
     __weak UIImageView *weakView = imageView;   // avoid memory usage increasing
     [self fetchImageForURL:url progress:nil completion:^(UIImage *image, NSString *error) {
         if (requestMap[hash] != url) {
@@ -74,6 +79,12 @@
 }
 
 - (void)fetchImageForURL:(NSString *)url progress:(LRImageProgressBlock)progress completion:(LRImageCompletionBlock)completion {
+    if (!url) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            completion ? completion(nil, @"URL is nil") : nil;
+        }];
+        return;
+    }
     // check cache first
     NSString *key = [self keyForURL:url];
     UIImage *image = [self imageForKey:key];
@@ -111,6 +122,9 @@
 }
 
 - (void)setImage:(UIImage *)image forKey:(NSString *)key {
+    if (!key || !image) {
+        return;
+    }
     [memoryCache setObject:image forKey:key];
     NSString *imagePath = [self imagePathForKey:key];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
@@ -118,6 +132,9 @@
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
+    if (!key) {
+        return nil;
+    }
     UIImage *result = [memoryCache objectForKey:key];
     if (!result) {
         result = [UIImage imageWithContentsOfFile:[self imagePathForKey:key]];
@@ -129,6 +146,9 @@
 }
 
 - (void)deleteImageForKey:(NSString *)key {
+    if (!key) {
+        return;
+    }
     [memoryCache removeObjectForKey:key];
     NSString *path = [self imagePathForKey:key];
     [[NSFileManager defaultManager] removeItemAtPath:path

@@ -15,8 +15,8 @@
 		D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */; };
 		D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */; };
 		D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */; };
-		D701EEB720B3EE4300A7DCE2 /* LRImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */; };
-		D701EEB820B3EE4300A7DCE2 /* LRImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D701EEBC20B3FA8B00A7DCE2 /* LRImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEBB20B3FA8B00A7DCE2 /* LRImageLoader.framework */; };
+		D701EEBD20B3FA8B00A7DCE2 /* LRImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D701EEBB20B3FA8B00A7DCE2 /* LRImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D71E899820B2CEA600E1CC76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E899720B2CEA600E1CC76 /* AppDelegate.m */; };
 		D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71E899F20B2CEA600E1CC76 /* Assets.xcassets */; };
 		D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71E89A120B2CEA600E1CC76 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D701EEB820B3EE4300A7DCE2 /* LRImageLoader.framework in Embed Frameworks */,
+				D701EEBD20B3FA8B00A7DCE2 /* LRImageLoader.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 		D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRImageLoader.framework; sourceTree = "<group>"; };
+		D701EEBB20B3FA8B00A7DCE2 /* LRImageLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRImageLoader.framework; sourceTree = "<group>"; };
 		D71E899320B2CEA600E1CC76 /* LRImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71E899620B2CEA600E1CC76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D71E899720B2CEA600E1CC76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D701EEB720B3EE4300A7DCE2 /* LRImageLoader.framework in Frameworks */,
+				D701EEBC20B3FA8B00A7DCE2 /* LRImageLoader.framework in Frameworks */,
 				D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */,
 				D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */,
 				D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */,
@@ -157,7 +157,7 @@
 		D71E89AE20B2D0BE00E1CC76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D701EEB620B3EE4300A7DCE2 /* LRImageLoader.framework */,
+				D701EEBB20B3FA8B00A7DCE2 /* LRImageLoader.framework */,
 				D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */,
 				D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */,
 				D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */,
