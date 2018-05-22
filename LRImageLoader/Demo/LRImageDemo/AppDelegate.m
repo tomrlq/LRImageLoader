@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[LRPhotosViewController alloc] init];
+    LRPhotosViewController *photosViewController = [[LRPhotosViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:photosViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

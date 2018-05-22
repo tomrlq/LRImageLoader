@@ -38,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"LRImageLoader Demo";
     self.collectionView.backgroundColor = [UIColor clearColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"LRPhotoCell" bundle:nil] forCellWithReuseIdentifier:@"LRPhotoCell"];
     [[LRPhotoStore sharedStore] fetchRecentPhotosWithCompletion:^(NSArray *photos, NSError *error) {
@@ -53,7 +54,6 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return currentPhotos.count;
@@ -71,6 +71,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     return CGSizeMake(screenWidth / 3.0, 120);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
 }
 
 @end
