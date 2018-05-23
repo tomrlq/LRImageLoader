@@ -21,6 +21,16 @@
 		D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71E899F20B2CEA600E1CC76 /* Assets.xcassets */; };
 		D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71E89A120B2CEA600E1CC76 /* LaunchScreen.storyboard */; };
 		D71E89A620B2CEA600E1CC76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E89A520B2CEA600E1CC76 /* main.m */; };
+		D7F8300B20B5574700E2EC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F8300920B5574700E2EC37 /* Main.storyboard */; };
+		D7F8300D20B5574700E2EC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F8300C20B5574700E2EC37 /* Assets.xcassets */; };
+		D7F8301020B5574700E2EC37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F8300E20B5574700E2EC37 /* LaunchScreen.storyboard */; };
+		D7F8301620B5575400E2EC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8301520B5575400E2EC37 /* AppDelegate.swift */; };
+		D7F8301920B5579E00E2EC37 /* LRImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F8301820B5579E00E2EC37 /* LRImageLoader.framework */; };
+		D7F8301A20B5579E00E2EC37 /* LRImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F8301820B5579E00E2EC37 /* LRImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7F8301E20B5581E00E2EC37 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8301D20B5581E00E2EC37 /* GalleryItem.swift */; };
+		D7F8302020B558CF00E2EC37 /* GalleryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8301F20B558CF00E2EC37 /* GalleryStore.swift */; };
+		D7F8302620B5679C00E2EC37 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8302520B5679C00E2EC37 /* PhotoGalleryViewController.swift */; };
+		D7F8302820B568D300E2EC37 /* GalleryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8302720B568D300E2EC37 /* GalleryItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +41,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D701EEC020B4007000A7DCE2 /* LRImageLoader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7F8301B20B5579E00E2EC37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7F8301A20B5579E00E2EC37 /* LRImageLoader.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +79,17 @@
 		D71E89A220B2CEA600E1CC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71E89A420B2CEA600E1CC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71E89A520B2CEA600E1CC76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LRImageDemo(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F8300A20B5574700E2EC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7F8300C20B5574700E2EC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7F8300F20B5574700E2EC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7F8301120B5574700E2EC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F8301520B5575400E2EC37 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7F8301820B5579E00E2EC37 /* LRImageLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRImageLoader.framework; sourceTree = "<group>"; };
+		D7F8301D20B5581E00E2EC37 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		D7F8301F20B558CF00E2EC37 /* GalleryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryStore.swift; sourceTree = "<group>"; };
+		D7F8302520B5679C00E2EC37 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		D7F8302720B568D300E2EC37 /* GalleryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +101,14 @@
 				D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */,
 				D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */,
 				D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7F8300020B5574700E2EC37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F8301920B5579E00E2EC37 /* LRImageLoader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				D71E899520B2CEA600E1CC76 /* LRImageDemo */,
+				D7F8300420B5574700E2EC37 /* LRImageDemo(Swift) */,
 				D71E89AE20B2D0BE00E1CC76 /* Frameworks */,
+				D7F8301720B5575D00E2EC37 /* Frameworks(Swift) */,
 				D71E899420B2CEA600E1CC76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D71E899320B2CEA600E1CC76 /* LRImageDemo.app */,
+				D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +208,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D7F8300420B5574700E2EC37 /* LRImageDemo(Swift) */ = {
+			isa = PBXGroup;
+			children = (
+				D7F8301520B5575400E2EC37 /* AppDelegate.swift */,
+				D7F8302520B5679C00E2EC37 /* PhotoGalleryViewController.swift */,
+				D7F8302720B568D300E2EC37 /* GalleryItemCell.swift */,
+				D7F8301D20B5581E00E2EC37 /* GalleryItem.swift */,
+				D7F8301F20B558CF00E2EC37 /* GalleryStore.swift */,
+				D7F8300920B5574700E2EC37 /* Main.storyboard */,
+				D7F8301C20B557BE00E2EC37 /* Supporting Files */,
+			);
+			path = "LRImageDemo(Swift)";
+			sourceTree = "<group>";
+		};
+		D7F8301720B5575D00E2EC37 /* Frameworks(Swift) */ = {
+			isa = PBXGroup;
+			children = (
+				D7F8301820B5579E00E2EC37 /* LRImageLoader.framework */,
+			);
+			name = "Frameworks(Swift)";
+			sourceTree = "<group>";
+		};
+		D7F8301C20B557BE00E2EC37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7F8300C20B5574700E2EC37 /* Assets.xcassets */,
+				D7F8301120B5574700E2EC37 /* Info.plist */,
+				D7F8300E20B5574700E2EC37 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +261,24 @@
 			productReference = D71E899320B2CEA600E1CC76 /* LRImageDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D7F8300220B5574700E2EC37 /* LRImageDemo(Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageDemo(Swift)" */;
+			buildPhases = (
+				D7F82FFF20B5574700E2EC37 /* Sources */,
+				D7F8300020B5574700E2EC37 /* Frameworks */,
+				D7F8300120B5574700E2EC37 /* Resources */,
+				D7F8301B20B5579E00E2EC37 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LRImageDemo(Swift)";
+			productName = "LRImageDemo(Swift)";
+			productReference = D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,11 +286,17 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LR;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = tomrlq;
 				TargetAttributes = {
 					D71E899220B2CEA600E1CC76 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D7F8300220B5574700E2EC37 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -216,6 +315,7 @@
 			projectRoot = "";
 			targets = (
 				D71E899220B2CEA600E1CC76 /* LRImageDemo */,
+				D7F8300220B5574700E2EC37 /* LRImageDemo(Swift) */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +328,16 @@
 				D701EE9620B3C8DC00A7DCE2 /* LRPhotoCell.xib in Resources */,
 				D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */,
 				D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7F8300120B5574700E2EC37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F8301020B5574700E2EC37 /* LaunchScreen.storyboard in Resources */,
+				D7F8300D20B5574700E2EC37 /* Assets.xcassets in Resources */,
+				D7F8300B20B5574700E2EC37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +357,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7F82FFF20B5574700E2EC37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F8302620B5679C00E2EC37 /* PhotoGalleryViewController.swift in Sources */,
+				D7F8301620B5575400E2EC37 /* AppDelegate.swift in Sources */,
+				D7F8302020B558CF00E2EC37 /* GalleryStore.swift in Sources */,
+				D7F8302820B568D300E2EC37 /* GalleryItemCell.swift in Sources */,
+				D7F8301E20B5581E00E2EC37 /* GalleryItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -254,6 +376,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				D71E89A220B2CEA600E1CC76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7F8300920B5574700E2EC37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F8300A20B5574700E2EC37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7F8300E20B5574700E2EC37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F8300F20B5574700E2EC37 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -403,6 +541,53 @@
 			};
 			name = Release;
 		};
+		D7F8301220B5574700E2EC37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FVVDGE72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "LRImageDemo(Swift)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageDemo-Swift-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7F8301320B5574700E2EC37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FVVDGE72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "LRImageDemo(Swift)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageDemo-Swift-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -420,6 +605,15 @@
 			buildConfigurations = (
 				D71E89AA20B2CEA600E1CC76 /* Debug */,
 				D71E89AB20B2CEA600E1CC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageDemo(Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7F8301220B5574700E2EC37 /* Debug */,
+				D7F8301320B5574700E2EC37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
