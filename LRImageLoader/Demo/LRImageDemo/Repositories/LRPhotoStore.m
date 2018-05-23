@@ -106,8 +106,7 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
                                                                  error:nil];
     NSArray *jsonArray = jsonObject[@"photos"][@"photo"];
     for (NSDictionary *jsonDict in jsonArray) {
-        LRPhoto *photo = [[LRPhoto alloc] init];
-        [photo readFromJSON:jsonDict];
+        LRPhoto *photo = [[LRPhoto alloc] initWithJSON:jsonDict];
         [photos addObject:photo];
     }
 }

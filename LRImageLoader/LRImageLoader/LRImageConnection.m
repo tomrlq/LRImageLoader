@@ -21,7 +21,6 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
 
 @interface LRImageConnection () <NSURLSessionDataDelegate>
 {
-    NSURLRequest *request;
     NSMutableData *dataContainer;
     NSURLSessionDataTask *internalTask;
     
@@ -69,7 +68,7 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
     LRImageConnection *connection = connectionCache[request.URL];
     if (!connection) {
         connection = [[self alloc] init];
-        connection->request = request;
+        connection->_request = request;
     }
     return connection;
 }
@@ -82,9 +81,9 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
     }
     isStarted = YES;
     dataContainer = [NSMutableData data];
-    internalTask = [session dataTaskWithRequest:request];
+    internalTask = [session dataTaskWithRequest:self.request];
     [internalTask resume];
-    [connectionCache setObject:self forKey:request.URL];
+    [connectionCache setObject:self forKey:self.request.URL];
 }
 
 #pragma mark - NSURLSessionDataDelegate
@@ -116,7 +115,7 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
     }
     progressBlocks = nil;
     completionBlocks = nil;
-    [connectionCache removeObjectForKey:request.URL];
+    [connectionCache removeObjectForKey:self.request.URL];
 }
 
 #pragma mark - Private Methods

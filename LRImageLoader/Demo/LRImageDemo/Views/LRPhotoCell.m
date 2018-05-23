@@ -18,6 +18,12 @@
 
 @implementation LRPhotoCell
 
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    
+    imageView.image = nil;
+}
+
 - (void)setPhoto:(LRPhoto *)photo {
     [[LRImageStore sharedStore] loadImage:photo.imageUrl
                               placeholder:[UIImage imageNamed:@"placeholder"]

@@ -14,6 +14,8 @@
  *  Image Download Task
  */
 @interface LRImageConnection : NSObject
+/// connection's corresponding request
+@property (nonatomic, readonly, strong) NSURLRequest *request;
 
 /// initialize connection
 + (instancetype)connectionWithRequest:(NSURLRequest *)request;

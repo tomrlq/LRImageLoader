@@ -9,13 +9,16 @@
 #import "LRPhoto.h"
 
 @implementation LRPhoto
-@synthesize photoID, title, imageUrl, owner;
 
-- (void)readFromJSON:(NSDictionary *)jsonDict {
-    photoID = jsonDict[@"id"];
-    title = jsonDict[@"title"];
-    imageUrl = jsonDict[@"url_s"];
-    owner = jsonDict[@"owner"];
+- (instancetype)initWithJSON:(NSDictionary *)jsonDict {
+    self = [super init];
+    if (self) {
+        _photoID = jsonDict[@"id"];
+        _title = jsonDict[@"title"];
+        _imageUrl = jsonDict[@"url_s"];
+        _owner = jsonDict[@"owner"];
+    }
+    return self;
 }
 
 @end

@@ -10,11 +10,11 @@
 
 @interface LRPhoto : NSObject
 
-@property (nonatomic, readonly, strong) NSString *photoID;
-@property (nonatomic, readonly, strong) NSString *title;
-@property (nonatomic, readonly, strong) NSString *imageUrl;
-@property (nonatomic, readonly, strong) NSString *owner;
+@property (nonatomic, readonly, copy) NSString *photoID;
+@property (nonatomic, readonly, copy) NSString *title;
+@property (nonatomic, readonly, copy) NSString *imageUrl;
+@property (nonatomic, readonly, copy) NSString *owner;
 
-- (void)readFromJSON:(NSDictionary *)jsonDict;
+- (instancetype)initWithJSON:(NSDictionary *)jsonDict;
 
 @end
