@@ -17,6 +17,10 @@ enum GalleryResult {
     case failure(Error)
 }
 
+enum FlickrError: Error {
+    case invalidJSONData
+}
+
 class GalleryStore {
     
     static let shared = GalleryStore()
@@ -47,9 +51,9 @@ class GalleryStore {
                     completion(.failure(errorMessage))
                 }
             } else {
-                self.parseItems(&self.recentItems, jsonData: data!)
+                let result = self.parseItemsFrom(jsonData: data!)
                 DispatchQueue.main.async {
-                    completion(.success(self.recentItems))
+                    completion(result)
                 }   
             }
         }
@@ -89,28 +93,34 @@ class GalleryStore {
     
     // MARK: - Parse JSON Results
     
-    private func parseItems(_ items: inout [GalleryItem], jsonData: Data) {
-        items.removeAll()
+    private func parseItemsFrom(jsonData: Data) -> GalleryResult {
         do {
-            let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String : Any]
-            let jsonObject = json["photos"] as! [String : Any]
-            let jsonArray = jsonObject["photo"] as! [[String : Any]]
+            let json = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            guard
+                let jsonBody = json as? [String : Any],
+                let jsonObject = jsonBody["photos"] as? [String : Any],
+                let jsonArray = jsonObject["photo"] as? [[String : Any]] else {
+                    return .failure(FlickrError.invalidJSONData)
+            }
+            
+            var items = [GalleryItem]()
             for jsonDict in jsonArray {
-                if let item = parseItemFrom(json: jsonDict) {
+                if let item = parseItemFrom(jsonDict: jsonDict) {
                     items.append(item)
                 }
             }
+            return .success(items)
         } catch let error {
-            print(error)
+            return .failure(error)
         }
     }
     
-    private func parseItemFrom(json: [String : Any]) -> GalleryItem? {
+    private func parseItemFrom(jsonDict: [String : Any]) -> GalleryItem? {
         guard
-            let itemID = json["id"] as? String,
-            let caption = json["title"] as? String,
-            let owner = json["owner"] as? String,
-            let imageUrl = json["url_s"] as? String else {
+            let itemID = jsonDict["id"] as? String,
+            let caption = jsonDict["title"] as? String,
+            let owner = jsonDict["owner"] as? String,
+            let imageUrl = jsonDict["url_s"] as? String else {
                 return nil
         }
         return GalleryItem(itemID: itemID, caption: caption, owner: owner, imageUrl: imageUrl)
