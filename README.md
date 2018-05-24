@@ -41,7 +41,7 @@ LRImageStore.shared().loadImage(imageUrl,
 ```
 * Swift
 ```swift
-LRImageStore.shared().fetchImage(forURL: item.imageUrl, progress: nil) { (image, errStr) in
+LRImageStore.shared().fetchImage(forURL: imageUrl, progress: nil) { (image, errStr) in
     if let successImage = image {
         // handle image
     }
