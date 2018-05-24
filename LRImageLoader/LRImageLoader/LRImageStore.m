@@ -80,18 +80,18 @@
 
 - (void)fetchImageForURL:(NSString *)url progress:(LRImageProgressBlock)progress completion:(LRImageCompletionBlock)completion {
     if (!url) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             completion ? completion(nil, @"URL is nil") : nil;
-        }];
+        });
         return;
     }
     // check cache first
     NSString *key = [self keyForURL:url];
     UIImage *image = [self imageForKey:key];
     if (image) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             completion ? completion(image, nil) : nil;
-        }];
+        });
         return;
     }
     // if not cached, then download
@@ -101,9 +101,9 @@
         if (!error) {
             [self setImage:image forKey:key];
         }
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             completion ? completion(image, error) : nil;
-        }];
+        });
     }];
 }
 
