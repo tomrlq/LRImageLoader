@@ -31,7 +31,7 @@ LRImageStore.shared().loadImage(imageUrl,
 ## Loading as UIImage
 * Objective-C
 ```objective-c
-[[LRImageStore sharedStore] fetchImageForURL:imageUrl progress:nil completion:^(UIImage * _Nullable image, NSString * _Nullable error) {
+[[LRImageStore sharedStore] fetchImageForURL:imageUrl progress:nil completion:^(UIImage * _Nullable image, NSError * _Nullable error) {
     if (!error) {
         // handle image
     }
@@ -39,7 +39,7 @@ LRImageStore.shared().loadImage(imageUrl,
 ```
 * Swift
 ```swift
-LRImageStore.shared().fetchImage(forURL: imageUrl, progress: nil) { (image, errStr) in
+LRImageStore.shared().fetchImage(forURL: imageUrl, progress: nil) { (image, error) in
     if let successImage = image {
         // handle image
     }
