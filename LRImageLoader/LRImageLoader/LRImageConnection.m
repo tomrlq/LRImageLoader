@@ -103,14 +103,13 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     if (error) {
-        [self callCompletionBlocksWithImage:nil errorString:error.localizedDescription];
+        [self callCompletionBlocksWithImage:nil error:error];
     } else {
         UIImage *image = [UIImage imageWithData:dataContainer];
         if (image && !CGSizeEqualToSize(image.size, CGSizeZero)) {
-            [self callCompletionBlocksWithImage:image errorString:nil];
+            [self callCompletionBlocksWithImage:image error:nil];
         } else {
-            NSString *errorString = @"Image is nil";
-            [self callCompletionBlocksWithImage:nil errorString:errorString];
+            [self callCompletionBlocksWithImage:nil error:[NSError errorWithDomain:@"LRImageError" code:0 userInfo:@{NSLocalizedDescriptionKey : @"Image is nil"}]];
         }
     }
     progressBlocks = nil;
@@ -120,9 +119,9 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
 
 #pragma mark - Private Methods
 
-- (void)callCompletionBlocksWithImage:(UIImage *)image errorString:(NSString *)errorString {
+- (void)callCompletionBlocksWithImage:(UIImage *)image error:(NSError *)error {
     for (LRImageCompletionBlock completionBlock in completionBlocks) {
-        completionBlock(image, errorString);
+        completionBlock(image, error);
     }
 }
 

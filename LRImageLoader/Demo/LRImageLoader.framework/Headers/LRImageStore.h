@@ -12,7 +12,7 @@
 /// progress callback
 typedef void(^LRImageProgressBlock)(NSProgress *_Nonnull progress, UIImage *_Nullable partialImage);
 /// completion callback
-typedef void(^LRImageCompletionBlock)(UIImage *_Nullable image, NSString *_Nullable error);
+typedef void(^LRImageCompletionBlock)(UIImage *_Nullable image, NSError *_Nullable error);
 
 /**
  * 'LRImageStore' have convenience methods for image loading and caching

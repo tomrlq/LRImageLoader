@@ -50,9 +50,9 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 #pragma mark - Networking
 
 - (void)fetchRecentPhotosWithCompletion:(void (^)(NSArray *, NSError *))completion {
-    if (recentPhotos.count > 0) {
+    if (recentPhotos.count > 0 && completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion ? completion(recentPhotos, nil) : nil;
+            completion(recentPhotos, nil);
         });
         return;
     }
@@ -62,9 +62,11 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
         if (!error) {
             [self parsePhotos:recentPhotos fromJSON:data];
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completion ? completion(recentPhotos, error) : nil;
-        });
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(recentPhotos, error);
+            });
+        }
     }];
     [task resume];
 }

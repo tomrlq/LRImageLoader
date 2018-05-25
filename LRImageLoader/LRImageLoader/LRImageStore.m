@@ -67,7 +67,7 @@
     NSNumber *hash = @(imageView.hash);
     requestMap[hash] = url;
     __weak UIImageView *weakView = imageView;   // avoid memory usage increasing
-    [self fetchImageForURL:url progress:nil completion:^(UIImage *image, NSString *error) {
+    [self fetchImageForURL:url progress:nil completion:^(UIImage *image, NSError *error) {
         if (requestMap[hash] != url) {
             return;
         }
@@ -79,31 +79,33 @@
 }
 
 - (void)fetchImageForURL:(NSString *)url progress:(LRImageProgressBlock)progress completion:(LRImageCompletionBlock)completion {
-    if (!url) {
+    if (!url && completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion ? completion(nil, @"URL is nil") : nil;
+            completion(nil, [NSError errorWithDomain:@"LRImageError" code:0 userInfo:@{NSLocalizedDescriptionKey : @"URL is nil"}]);
         });
         return;
     }
     // check cache first
     NSString *key = [self keyForURL:url];
     UIImage *image = [self imageForKey:key];
-    if (image) {
+    if (image && completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion ? completion(image, nil) : nil;
+            completion(image, nil);
         });
         return;
     }
     // if not cached, then download
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     LRImageConnection *connection = [LRImageConnection connectionWithRequest:request];
-    [connection startWithProgress:progress completion:^(UIImage *image, NSString *error) {
+    [connection startWithProgress:progress completion:^(UIImage *image, NSError *error) {
         if (!error) {
             [self setImage:image forKey:key];
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completion ? completion(image, error) : nil;
-        });
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(image, error);
+            });
+        }
     }];
 }
 
