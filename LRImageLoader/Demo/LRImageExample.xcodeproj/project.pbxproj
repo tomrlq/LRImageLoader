@@ -72,14 +72,14 @@
 		D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D701EEBE20B4007000A7DCE2 /* LRImageLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRImageLoader.framework; sourceTree = "<group>"; };
-		D71E899320B2CEA600E1CC76 /* LRImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71E899320B2CEA600E1CC76 /* LRImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71E899620B2CEA600E1CC76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D71E899720B2CEA600E1CC76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D71E899F20B2CEA600E1CC76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D71E89A220B2CEA600E1CC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71E89A420B2CEA600E1CC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71E89A520B2CEA600E1CC76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LRImageDemo(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F8300320B5574700E2EC37 /* LRImageExample(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LRImageExample(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F8300A20B5574700E2EC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7F8300C20B5574700E2EC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7F8300F20B5574700E2EC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		D71E898A20B2CEA600E1CC76 = {
 			isa = PBXGroup;
 			children = (
-				D71E899520B2CEA600E1CC76 /* LRImageDemo */,
-				D7F8300420B5574700E2EC37 /* LRImageDemo(Swift) */,
+				D71E899520B2CEA600E1CC76 /* LRImageExample */,
+				D7F8300420B5574700E2EC37 /* LRImageExample(Swift) */,
 				D71E89AE20B2D0BE00E1CC76 /* Frameworks */,
 				D7F8301720B5575D00E2EC37 /* Frameworks(Swift) */,
 				D71E899420B2CEA600E1CC76 /* Products */,
@@ -166,13 +166,13 @@
 		D71E899420B2CEA600E1CC76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D71E899320B2CEA600E1CC76 /* LRImageDemo.app */,
-				D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */,
+				D71E899320B2CEA600E1CC76 /* LRImageExample.app */,
+				D7F8300320B5574700E2EC37 /* LRImageExample(Swift).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D71E899520B2CEA600E1CC76 /* LRImageDemo */ = {
+		D71E899520B2CEA600E1CC76 /* LRImageExample */ = {
 			isa = PBXGroup;
 			children = (
 				D701EE8720B3B2EC00A7DCE2 /* ViewControllers */,
@@ -183,7 +183,7 @@
 				D71E899720B2CEA600E1CC76 /* AppDelegate.m */,
 				D71E89AC20B2D02600E1CC76 /* Supporting Files */,
 			);
-			path = LRImageDemo;
+			path = LRImageExample;
 			sourceTree = "<group>";
 		};
 		D71E89AC20B2D02600E1CC76 /* Supporting Files */ = {
@@ -208,7 +208,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D7F8300420B5574700E2EC37 /* LRImageDemo(Swift) */ = {
+		D7F8300420B5574700E2EC37 /* LRImageExample(Swift) */ = {
 			isa = PBXGroup;
 			children = (
 				D7F8301520B5575400E2EC37 /* AppDelegate.swift */,
@@ -219,7 +219,7 @@
 				D7F8300920B5574700E2EC37 /* Main.storyboard */,
 				D7F8301C20B557BE00E2EC37 /* Supporting Files */,
 			);
-			path = "LRImageDemo(Swift)";
+			path = "LRImageExample(Swift)";
 			sourceTree = "<group>";
 		};
 		D7F8301720B5575D00E2EC37 /* Frameworks(Swift) */ = {
@@ -243,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D71E899220B2CEA600E1CC76 /* LRImageDemo */ = {
+		D71E899220B2CEA600E1CC76 /* LRImageExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageDemo" */;
+			buildConfigurationList = D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageExample" */;
 			buildPhases = (
 				D71E898F20B2CEA600E1CC76 /* Sources */,
 				D71E899020B2CEA600E1CC76 /* Frameworks */,
@@ -256,14 +256,14 @@
 			);
 			dependencies = (
 			);
-			name = LRImageDemo;
+			name = LRImageExample;
 			productName = LRImageDemo;
-			productReference = D71E899320B2CEA600E1CC76 /* LRImageDemo.app */;
+			productReference = D71E899320B2CEA600E1CC76 /* LRImageExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D7F8300220B5574700E2EC37 /* LRImageDemo(Swift) */ = {
+		D7F8300220B5574700E2EC37 /* LRImageExample(Swift) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageDemo(Swift)" */;
+			buildConfigurationList = D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageExample(Swift)" */;
 			buildPhases = (
 				D7F82FFF20B5574700E2EC37 /* Sources */,
 				D7F8300020B5574700E2EC37 /* Frameworks */,
@@ -274,9 +274,9 @@
 			);
 			dependencies = (
 			);
-			name = "LRImageDemo(Swift)";
+			name = "LRImageExample(Swift)";
 			productName = "LRImageDemo(Swift)";
-			productReference = D7F8300320B5574700E2EC37 /* LRImageDemo(Swift).app */;
+			productReference = D7F8300320B5574700E2EC37 /* LRImageExample(Swift).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageDemo" */;
+			buildConfigurationList = D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageExample" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -314,8 +314,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D71E899220B2CEA600E1CC76 /* LRImageDemo */,
-				D7F8300220B5574700E2EC37 /* LRImageDemo(Swift) */,
+				D71E899220B2CEA600E1CC76 /* LRImageExample */,
+				D7F8300220B5574700E2EC37 /* LRImageExample(Swift) */,
 			);
 		};
 /* End PBXProject section */
@@ -513,10 +513,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = LRImageDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LRImageExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -532,10 +532,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = LRImageDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LRImageExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.tomrlq.LRImageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,10 +552,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "LRImageDemo(Swift)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LRImageExample(Swift)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageDemo-Swift-";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageExample-Swift-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -576,10 +576,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "LRImageDemo(Swift)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LRImageExample(Swift)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageDemo-Swift-";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tomrlq.LRImageExample-Swift-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -591,7 +591,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageDemo" */ = {
+		D71E898E20B2CEA600E1CC76 /* Build configuration list for PBXProject "LRImageExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D71E89A720B2CEA600E1CC76 /* Debug */,
@@ -600,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageDemo" */ = {
+		D71E89A920B2CEA600E1CC76 /* Build configuration list for PBXNativeTarget "LRImageExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D71E89AA20B2CEA600E1CC76 /* Debug */,
@@ -609,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageDemo(Swift)" */ = {
+		D7F8301420B5574700E2EC37 /* Build configuration list for PBXNativeTarget "LRImageExample(Swift)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7F8301220B5574700E2EC37 /* Debug */,

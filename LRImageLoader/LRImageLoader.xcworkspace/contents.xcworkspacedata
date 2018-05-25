@@ -5,6 +5,6 @@
       location = "group:LRImageLoader.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Demo/LRImageDemo.xcodeproj">
+      location = "group:Demo/LRImageExample.xcodeproj">
    </FileRef>
 </Workspace>
