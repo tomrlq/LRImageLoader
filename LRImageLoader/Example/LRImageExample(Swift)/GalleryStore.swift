@@ -1,6 +1,6 @@
 //
 //  GalleryStore.swift
-//  LRImageDemo(Swift)
+//  LRImageExample(Swift)
 //
 //  Created by Ruan Lingqi on 23/05/18.
 //  Copyright © 2018年 tomrlq. All rights reserved.
@@ -97,9 +97,9 @@ class GalleryStore {
         do {
             let json = try JSONSerialization.jsonObject(with: jsonData, options: [])
             guard
-                let jsonBody = json as? [String : Any],
-                let jsonObject = jsonBody["photos"] as? [String : Any],
-                let jsonArray = jsonObject["photo"] as? [[String : Any]] else {
+                let jsonBody = json as? [String: Any],
+                let jsonObject = jsonBody["photos"] as? [String: Any],
+                let jsonArray = jsonObject["photo"] as? [[String: Any]] else {
                     return .failure(FlickrError.invalidJSONData)
             }
             
@@ -115,7 +115,7 @@ class GalleryStore {
         }
     }
     
-    private func parseItemFrom(jsonDict: [String : Any]) -> GalleryItem? {
+    private func parseItemFrom(jsonDict: [String: Any]) -> GalleryItem? {
         guard
             let itemID = jsonDict["id"] as? String,
             let caption = jsonDict["title"] as? String,

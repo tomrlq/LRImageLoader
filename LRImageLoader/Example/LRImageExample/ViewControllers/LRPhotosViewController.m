@@ -1,6 +1,6 @@
 //
 //  LRPhotosViewController.m
-//  LRImageDemo
+//  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
 //  Copyright © 2018年 tomrlq. All rights reserved.
@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"LRImageLoader Demo";
+    self.title = @"LRImageLoader Example";
     self.collectionView.backgroundColor = [UIColor clearColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"LRPhotoCell" bundle:nil] forCellWithReuseIdentifier:@"LRPhotoCell"];
     [[LRPhotoStore sharedStore] fetchRecentPhotosWithCompletion:^(NSArray *photos, NSError *error) {
