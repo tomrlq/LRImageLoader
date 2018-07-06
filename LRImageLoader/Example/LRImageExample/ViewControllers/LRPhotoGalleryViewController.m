@@ -1,23 +1,23 @@
 //
-//  LRPhotosViewController.m
+//  LRPhotoGalleryViewController.m
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
 //  Copyright © 2018年 tomrlq. All rights reserved.
 //
 
-#import "LRPhotosViewController.h"
-#import "LRPhotoCell.h"
-#import "LRPhotoStore.h"
-#import "LRPhoto.h"
+#import "LRPhotoGalleryViewController.h"
+#import "LRGalleryItemCell.h"
+#import "LRGalleryStore.h"
+#import "LRGalleryItem.h"
 
-@interface LRPhotosViewController () <UICollectionViewDelegateFlowLayout>
+@interface LRPhotoGalleryViewController () <UICollectionViewDelegateFlowLayout>
 {
-    NSArray *currentPhotos;
+    NSArray *currentItems;
 }
 @end
 
-@implementation LRPhotosViewController
+@implementation LRPhotoGalleryViewController
 
 #pragma mark - UICollectionViewController Overrides
 
@@ -26,7 +26,7 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     self = [super initWithCollectionViewLayout:flowLayout];
     if (self) {
-        currentPhotos = nil;
+        currentItems = nil;
     }
     return self;
 }
@@ -40,10 +40,10 @@
     
     self.title = @"LRImageLoader Example";
     self.collectionView.backgroundColor = [UIColor clearColor];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"LRPhotoCell" bundle:nil] forCellWithReuseIdentifier:@"LRPhotoCell"];
-    [[LRPhotoStore sharedStore] fetchRecentPhotosWithCompletion:^(NSArray *photos, NSError *error) {
+    [self.collectionView registerNib:[UINib nibWithNibName:@"LRGalleryItemCell" bundle:nil] forCellWithReuseIdentifier:@"LRGalleryItemCell"];
+    [[LRGalleryStore sharedStore] fetchRecentPhotosWithCompletion:^(NSArray *galleryItems, NSError *error) {
         if (!error) {
-            currentPhotos = photos;
+            currentItems = galleryItems;
             [self.collectionView reloadData];
         }
     }];
@@ -56,13 +56,13 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return currentPhotos.count;
+    return currentItems.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LRPhoto *photo = currentPhotos[indexPath.item];
-    LRPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LRPhotoCell" forIndexPath:indexPath];
-    [cell setPhoto:photo];
+    LRGalleryItem *galleryItem = currentItems[indexPath.item];
+    LRGalleryItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LRGalleryItemCell" forIndexPath:indexPath];
+    [cell setGalleryItem:galleryItem];
     return cell;
 }
 

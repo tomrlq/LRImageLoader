@@ -91,6 +91,7 @@ class GalleryStore {
         return components.url!
     }
     
+    
     // MARK: - Parse JSON Results
     
     private func parseItemsFrom(jsonData: Data) -> GalleryResult {
@@ -102,7 +103,6 @@ class GalleryStore {
                 let jsonArray = jsonObject["photo"] as? [[String: Any]] else {
                     return .failure(FlickrError.invalidJSONData)
             }
-            
             var items = [GalleryItem]()
             for jsonDict in jsonArray {
                 if let item = parseItemFrom(jsonDict: jsonDict) {

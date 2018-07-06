@@ -1,5 +1,5 @@
 //
-//  LRPhoto.h
+//  LRGalleryItem.h
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LRPhoto : NSObject
+@interface LRGalleryItem : NSObject
 
-@property (nonatomic, readonly, copy) NSString *photoID;
-@property (nonatomic, readonly, copy) NSString *title;
+@property (nonatomic, readonly, copy) NSString *itemID;
+@property (nonatomic, readonly, copy) NSString *caption;
 @property (nonatomic, readonly, copy) NSString *imageUrl;
 @property (nonatomic, readonly, copy) NSString *owner;
 

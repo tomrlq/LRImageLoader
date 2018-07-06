@@ -1,5 +1,5 @@
 //
-//  LRPhotosViewController.h
+//  LRGalleryItemCell.h
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LRGalleryItem;
 
-@interface LRPhotosViewController : UICollectionViewController
+@interface LRGalleryItemCell : UICollectionViewCell
+
+- (void)setGalleryItem:(LRGalleryItem *)galleryItem;
 
 @end

@@ -1,20 +1,20 @@
 //
-//  LRPhoto.m
+//  LRGalleryItem.m
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
 //  Copyright © 2018年 tomrlq. All rights reserved.
 //
 
-#import "LRPhoto.h"
+#import "LRGalleryItem.h"
 
-@implementation LRPhoto
+@implementation LRGalleryItem
 
 - (instancetype)initWithJSON:(NSDictionary *)jsonDict {
     self = [super init];
     if (self) {
-        _photoID = jsonDict[@"id"];
-        _title = jsonDict[@"title"];
+        _itemID = jsonDict[@"id"];
+        _caption = jsonDict[@"title"];
         _imageUrl = jsonDict[@"url_s"];
         _owner = jsonDict[@"owner"];
     }

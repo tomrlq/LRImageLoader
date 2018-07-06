@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LRPhotosViewController.h"
+#import "LRPhotoGalleryViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    LRPhotosViewController *photosViewController = [[LRPhotosViewController alloc] init];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:photosViewController];
+    LRPhotoGalleryViewController *photoGalleryViewController = [[LRPhotoGalleryViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:photoGalleryViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

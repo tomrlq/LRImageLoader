@@ -1,31 +1,31 @@
 //
-//  LRPhotoStore.m
+//  LRGalleryStore.m
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
 //  Copyright © 2018年 tomrlq. All rights reserved.
 //
 
-#import "LRPhotoStore.h"
-#import "LRPhoto.h"
+#import "LRGalleryStore.h"
+#import "LRGalleryItem.h"
 
 NSString * const EndPoint = @"https://api.flickr.com/services/rest";
 NSString * const APIKey = @"a6d819499131071f158fd740860a5a88";
 NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 
-@interface LRPhotoStore () <NSURLSessionDataDelegate>
+@interface LRGalleryStore () <NSURLSessionDataDelegate>
 {
     NSURLSession *session;
-    NSMutableArray *recentPhotos;
+    NSMutableArray *recentItems;
 }
 @end
 
-@implementation LRPhotoStore
+@implementation LRGalleryStore
 
 #pragma mark - Initialization
 
-+ (LRPhotoStore *)sharedStore {
-    static LRPhotoStore *sharedStore = nil;
++ (LRGalleryStore *)sharedStore {
+    static LRGalleryStore *sharedStore = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedStore = [[super allocWithZone:NULL] init];
@@ -40,7 +40,7 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        recentPhotos = [NSMutableArray array];
+        recentItems = [NSMutableArray array];
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         session = [NSURLSession sessionWithConfiguration:config];
     }
@@ -50,9 +50,9 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 #pragma mark - Networking
 
 - (void)fetchRecentPhotosWithCompletion:(void (^)(NSArray *, NSError *))completion {
-    if (recentPhotos.count > 0 && completion) {
+    if (recentItems.count > 0 && completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion(recentPhotos, nil);
+            completion(recentItems, nil);
         });
         return;
     }
@@ -60,11 +60,11 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
-            [self parsePhotos:recentPhotos fromJSON:data];
+            [self parseItems:recentItems fromJSON:data];
         }
         if (completion) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                completion(recentPhotos, error);
+                completion(recentItems, error);
             });
         }
     }];
@@ -101,15 +101,15 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 
 #pragma mark - Parse JSON Results
 
-- (void)parsePhotos:(NSMutableArray *)photos fromJSON:(NSData *)jsonData {
-    [photos removeAllObjects];
+- (void)parseItems:(NSMutableArray *)items fromJSON:(NSData *)jsonData {
+    [items removeAllObjects];
     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                options:0
                                                                  error:nil];
     NSArray *jsonArray = jsonObject[@"photos"][@"photo"];
     for (NSDictionary *jsonDict in jsonArray) {
-        LRPhoto *photo = [[LRPhoto alloc] initWithJSON:jsonDict];
-        [photos addObject:photo];
+        LRGalleryItem *item = [[LRGalleryItem alloc] initWithJSON:jsonDict];
+        [items addObject:item];
     }
 }
 

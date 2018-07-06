@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D701EE8B20B3B51B00A7DCE2 /* LRPhotoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */; };
-		D701EE8E20B3C3C100A7DCE2 /* LRPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */; };
-		D701EE9120B3C6C200A7DCE2 /* LRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */; };
-		D701EE9520B3C8DC00A7DCE2 /* LRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */; };
-		D701EE9620B3C8DC00A7DCE2 /* LRPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */; };
+		D701EE8B20B3B51B00A7DCE2 /* LRGalleryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8A20B3B51B00A7DCE2 /* LRGalleryStore.m */; };
+		D701EE8E20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE8D20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.m */; };
+		D701EE9120B3C6C200A7DCE2 /* LRGalleryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9020B3C6C200A7DCE2 /* LRGalleryItem.m */; };
+		D701EE9520B3C8DC00A7DCE2 /* LRGalleryItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EE9320B3C8DC00A7DCE2 /* LRGalleryItemCell.m */; };
+		D701EE9620B3C8DC00A7DCE2 /* LRGalleryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D701EE9420B3C8DC00A7DCE2 /* LRGalleryItemCell.xib */; };
 		D701EE9820B3DBEB00A7DCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */; };
 		D701EE9A20B3DBF500A7DCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */; };
 		D701EE9C20B3DBFA00A7DCE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */; };
@@ -59,15 +59,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D701EE8920B3B51B00A7DCE2 /* LRPhotoStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotoStore.h; sourceTree = "<group>"; };
-		D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotoStore.m; sourceTree = "<group>"; };
-		D701EE8C20B3C3C100A7DCE2 /* LRPhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotosViewController.h; sourceTree = "<group>"; };
-		D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotosViewController.m; sourceTree = "<group>"; };
-		D701EE8F20B3C6C200A7DCE2 /* LRPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhoto.h; sourceTree = "<group>"; };
-		D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhoto.m; sourceTree = "<group>"; };
-		D701EE9220B3C8DC00A7DCE2 /* LRPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotoCell.h; sourceTree = "<group>"; };
-		D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotoCell.m; sourceTree = "<group>"; };
-		D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRPhotoCell.xib; sourceTree = "<group>"; };
+		D701EE8920B3B51B00A7DCE2 /* LRGalleryStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRGalleryStore.h; sourceTree = "<group>"; };
+		D701EE8A20B3B51B00A7DCE2 /* LRGalleryStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRGalleryStore.m; sourceTree = "<group>"; };
+		D701EE8C20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRPhotoGalleryViewController.h; sourceTree = "<group>"; };
+		D701EE8D20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRPhotoGalleryViewController.m; sourceTree = "<group>"; };
+		D701EE8F20B3C6C200A7DCE2 /* LRGalleryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRGalleryItem.h; sourceTree = "<group>"; };
+		D701EE9020B3C6C200A7DCE2 /* LRGalleryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRGalleryItem.m; sourceTree = "<group>"; };
+		D701EE9220B3C8DC00A7DCE2 /* LRGalleryItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRGalleryItemCell.h; sourceTree = "<group>"; };
+		D701EE9320B3C8DC00A7DCE2 /* LRGalleryItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRGalleryItemCell.m; sourceTree = "<group>"; };
+		D701EE9420B3C8DC00A7DCE2 /* LRGalleryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRGalleryItemCell.xib; sourceTree = "<group>"; };
 		D701EE9720B3DBEB00A7DCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D701EE9920B3DBF500A7DCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D701EE9B20B3DBFA00A7DCE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -118,8 +118,8 @@
 		D701EE8520B3B29D00A7DCE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D701EE8F20B3C6C200A7DCE2 /* LRPhoto.h */,
-				D701EE9020B3C6C200A7DCE2 /* LRPhoto.m */,
+				D701EE8F20B3C6C200A7DCE2 /* LRGalleryItem.h */,
+				D701EE9020B3C6C200A7DCE2 /* LRGalleryItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,8 +127,8 @@
 		D701EE8620B3B2D700A7DCE2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				D701EE8920B3B51B00A7DCE2 /* LRPhotoStore.h */,
-				D701EE8A20B3B51B00A7DCE2 /* LRPhotoStore.m */,
+				D701EE8920B3B51B00A7DCE2 /* LRGalleryStore.h */,
+				D701EE8A20B3B51B00A7DCE2 /* LRGalleryStore.m */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 		D701EE8720B3B2EC00A7DCE2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D701EE8C20B3C3C100A7DCE2 /* LRPhotosViewController.h */,
-				D701EE8D20B3C3C100A7DCE2 /* LRPhotosViewController.m */,
+				D701EE8C20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.h */,
+				D701EE8D20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 		D701EE8820B3B2F400A7DCE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D701EE9220B3C8DC00A7DCE2 /* LRPhotoCell.h */,
-				D701EE9320B3C8DC00A7DCE2 /* LRPhotoCell.m */,
-				D701EE9420B3C8DC00A7DCE2 /* LRPhotoCell.xib */,
+				D701EE9220B3C8DC00A7DCE2 /* LRGalleryItemCell.h */,
+				D701EE9320B3C8DC00A7DCE2 /* LRGalleryItemCell.m */,
+				D701EE9420B3C8DC00A7DCE2 /* LRGalleryItemCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D701EE9620B3C8DC00A7DCE2 /* LRPhotoCell.xib in Resources */,
+				D701EE9620B3C8DC00A7DCE2 /* LRGalleryItemCell.xib in Resources */,
 				D71E89A320B2CEA600E1CC76 /* LaunchScreen.storyboard in Resources */,
 				D71E89A020B2CEA600E1CC76 /* Assets.xcassets in Resources */,
 			);
@@ -348,12 +348,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D701EE9520B3C8DC00A7DCE2 /* LRPhotoCell.m in Sources */,
+				D701EE9520B3C8DC00A7DCE2 /* LRGalleryItemCell.m in Sources */,
 				D71E89A620B2CEA600E1CC76 /* main.m in Sources */,
-				D701EE8E20B3C3C100A7DCE2 /* LRPhotosViewController.m in Sources */,
-				D701EE8B20B3B51B00A7DCE2 /* LRPhotoStore.m in Sources */,
+				D701EE8E20B3C3C100A7DCE2 /* LRPhotoGalleryViewController.m in Sources */,
+				D701EE8B20B3B51B00A7DCE2 /* LRGalleryStore.m in Sources */,
 				D71E899820B2CEA600E1CC76 /* AppDelegate.m in Sources */,
-				D701EE9120B3C6C200A7DCE2 /* LRPhoto.m in Sources */,
+				D701EE9120B3C6C200A7DCE2 /* LRGalleryItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  LRPhotoCell.h
+//  LRPhotoGalleryViewController.h
 //  LRImageExample
 //
 //  Created by Ruan Lingqi on 22/05/18.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LRPhoto;
 
-@interface LRPhotoCell : UICollectionViewCell
-
-- (void)setPhoto:(LRPhoto *)photo;
+@interface LRPhotoGalleryViewController : UICollectionViewController
 
 @end

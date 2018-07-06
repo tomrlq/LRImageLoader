@@ -27,12 +27,12 @@ UICollectionViewDelegateFlowLayout {
         }
     }
 
+    
     // MARK: - UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentItems.count
@@ -45,6 +45,7 @@ UICollectionViewDelegateFlowLayout {
         return cell
     }
 
+    
     // MARK: - UICollectionViewDelegateFlowLayout
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
