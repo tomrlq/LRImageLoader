@@ -12,7 +12,7 @@
 
 static NSMutableDictionary *connectionCache = nil;  // dictionary contained all connections
 static NSURLSession *session = nil;                 // internal session
-static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
+static LRImageSessionDelegate *sessionDelegate;    // internal session delegate
 
 
 
@@ -39,7 +39,7 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         connectionCache = [NSMutableDictionary dictionary];
-        sessionDelegate = [[STYImageSessionDelegate alloc] init];
+        sessionDelegate = [[LRImageSessionDelegate alloc] init];
         
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
@@ -130,9 +130,9 @@ static STYImageSessionDelegate *sessionDelegate;    // internal session delegate
 
 
 
-#pragma mark - Internal STYImageSessionDelegate
+#pragma mark - Internal LRImageSessionDelegate
 
-@implementation STYImageSessionDelegate
+@implementation LRImageSessionDelegate
 
 - (LRImageConnection *)connectionForTask:(NSURLSessionTask *)task {
     NSURL *urlKey = task.originalRequest.URL;

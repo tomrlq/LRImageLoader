@@ -30,6 +30,6 @@
 /**
  *  internal data delegate
  */
-@interface STYImageSessionDelegate : NSObject <NSURLSessionDataDelegate>
+@interface LRImageSessionDelegate : NSObject <NSURLSessionDataDelegate>
 
 @end
