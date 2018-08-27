@@ -52,7 +52,7 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
 - (void)fetchRecentPhotosWithCompletion:(void (^)(NSArray *, NSError *))completion {
     if (recentItems.count > 0 && completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion(recentItems, nil);
+            completion(self->recentItems, nil);
         });
         return;
     }
@@ -60,11 +60,11 @@ NSString * const FetchRecentsMethod = @"flickr.photos.getRecent";
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
-            [self parseItems:recentItems fromJSON:data];
+            [self parseItems:self->recentItems fromJSON:data];
         }
         if (completion) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                completion(recentItems, error);
+                completion(self->recentItems, error);
             });
         }
     }];

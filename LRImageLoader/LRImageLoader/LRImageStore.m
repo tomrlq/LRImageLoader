@@ -68,13 +68,13 @@
     requestMap[hash] = url;
     __weak UIImageView *weakView = imageView;   // avoid memory usage increasing
     [self fetchImageForURL:url progress:nil completion:^(UIImage *image, NSError *error) {
-        if (requestMap[hash] != url) {
+        if (self->requestMap[hash] != url) {
             return;
         }
         if (weakView && !error) {
             weakView.image = image;
         }
-        [requestMap removeObjectForKey:hash];
+        [self->requestMap removeObjectForKey:hash];
     }];
 }
 

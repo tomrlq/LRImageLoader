@@ -43,7 +43,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"LRGalleryItemCell" bundle:nil] forCellWithReuseIdentifier:@"LRGalleryItemCell"];
     [[LRGalleryStore sharedStore] fetchRecentPhotosWithCompletion:^(NSArray *galleryItems, NSError *error) {
         if (!error) {
-            currentItems = galleryItems;
+            self->currentItems = galleryItems;
             [self.collectionView reloadData];
         }
     }];
