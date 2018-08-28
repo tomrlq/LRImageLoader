@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LRImageLoader"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "An image loading and caching library"
   s.description  = <<-DESC
   LRImageLoader is an image loading and caching library
